@@ -67,56 +67,22 @@ Soultan is a lightweight, expressive, and processor-friendly software synthesize
 
 ## Sound Demo
 
-Listen to the demos directly in your browser:
-
----
-
-### Demo 1
-<audio controls>
-  <source src="../audio/Soultan_Demo_Hard_Trance.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
----
-
-### Demo 2
-<audio controls>
-  <source src="../audio/Soultan_Demo_hip-hop.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
----
-
-### Demo 3
-<audio controls>
-  <source src="../audio/Soultan_Demo_Italo_Disco.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
----
-
-### Demo 4
-<audio controls>
-  <source src="../audio/Soultan_Demo_Mellow_House.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+- [Listen to Soultan Synth Demo 1](../audio/Soultan_Demo_Hard_Trance.mp3)
+- [Listen to Soultan Synth Demo 2](../audio/Soultan_Demo_hip-hop.mp3)
+- [Listen to Soultan Synth Demo 3](../audio/Soultan_Demo_Italo_Disco.mp3)
+- [Listen to Soultan Synth Demo 4](../audio/Soultan_Demo_Mellow_House.mp3)
 
 - Axel F. Theme by Harold Faltermeyer:
-[![Watch Solutan Synth live demo](https://img.youtube.com/vi/cK95R3FBADE/0.jpg)](https://
+- [![Watch Solutan Synth live demo](https://img.youtube.com/vi/cK95R3FBADE/0.jpg)](https://
 www.youtube.com/watch?v=cK95R3FBADE)
-
 - Another One Bites the Dust by Queen:
 - [![Watch Solutan Synth live demo](https://img.youtube.com/vi/u_b9sZQVU1g/0.jpg)](https://www.youtube.com/watch?v=u_b9sZQVU1g)
-
 - Family Affair by Mary J. Blige:
 - [![Watch Solutan Synth live demo](https://img.youtube.com/vi/0VyFMfIOivE/0.jpg)](https://www.youtube.com/watch?v=0VyFMfIOivE)
-
 - Fascinated by Company B:
 - [![Watch Solutan Synth live demo](https://img.youtube.com/vi/Q0XBSBMtKxU/0.jpg)](https://www.youtube.com/watch?v=Q0XBSBMtKxU)
-
 - Az Naaz by Ahmad Zahir:
 - [![Watch Solutan Synth live demo](https://img.youtube.com/vi/K_YWLuEMqvY/0.jpg)](https://www.youtube.com/watch?v=K_YWLuEMqvY)
-
 - Jam On It by Newcleus:
 - [![Watch Solutan Synth live demo](https://img.youtube.com/vi/iNBkPXya354/0.jpg)](https://www.youtube.com/watch?v=iNBkPXya354)
 
