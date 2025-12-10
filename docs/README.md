@@ -67,10 +67,10 @@ Soultan is a lightweight, expressive, and processor-friendly software synthesize
 
 ## Sound Demo
 
-- [Listen to Soultan Synth Demo 1](../audio/Soultan_Demo_Hard Trance.wav)
+- [Listen to Soultan Synth Demo 1](../audio/Soultan_Demo_Hard_Trance.wav)
 - [Listen to Soultan Synth Demo 2](../audio/Soultan_Demo_hip-hop.wav)
-- [Listen to Soultan Synth Demo 3](../audio/Soultan_Demo_Italo Disco.wav)
-- [Listen to Soultan Synth Demo 4](../audio/Soultan_Demo_Mellow House.wav)
+- [Listen to Soultan Synth Demo 3](../audio/Soultan_Demo_Italo_Disco.wav)
+- [Listen to Soultan Synth Demo 4](../audio/Soultan_Demo_Mellow_House.wav)
 
 - [![Watch Solutan Synth live demo](https://img.youtube.com/vi/cK95R3FBADE/0.jpg)](https://www.youtube.com/watch?v=cK95R3FBADE)
 - [![Watch Solutan Synth live demo](https://img.youtube.com/vi/u_b9sZQVU1g/0.jpg)](https://www.youtube.com/watch?v=u_b9sZQVU1g)
