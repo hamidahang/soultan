@@ -1,0 +1,993 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentProperties DeviceType="Desktop">
+  <Component type="ScriptPanel" id="pnlBackground" x="0.0" y="1.0" width="1000.0"
+             height="750.0" max="99.98999786376953" text="">
+    <Component type="ScriptButton" id="btnPower" x="20.0" y="143.0" processorId="Waveform Generator1"
+               parameterId="Enabled" text="" width="57.0" parentComponent="pnlBackground"
+               height="73.0" bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+               textColour="16777215" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Filmstrip_gold-5.png"
+               numStrips="6.0" scaleFactor="0.7200000286102295"/>
+    <Component type="ScriptImage" id="img-power-grill" x="84.0" y="141.0" parentComponent="pnlBackground"
+               width="196.0" height="74.0" fileName="{PROJECT_FOLDER}synth_power_grill_4.png"
+               text=""/>
+    <Component type="ScriptFloatingTile" id="fltAudioAnalyser" x="324.0" y="51.0"
+               width="142.0" height="47.0" ContentType="AudioAnalyser" itemColour="4278190080"
+               itemColour2="4278190080" textColour="0" Data="{&#10;  &quot;ProcessorId&quot;: &quot;Analyser1&quot;,&#10;  &quot;Index&quot;: 1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+               parentComponent="pnlBackground" bgColour="4294572288"/>
+    <Component type="ScriptImage" id="TFTScreen_Osc_3" x="305.0" y="31.0" width="180.0"
+               height="90.0" parentComponent="pnlBackground" text="" fileName="{PROJECT_FOLDER}SilvrSynt_TFT_Screen_185x90_1.png"
+               popupOnRightClick="0"/>
+    <Component type="ScriptLabel" id="txt-main-volume" x="291.0" y="119.0" text="V O L U M E"
+               editable="0" height="23.0" width="128.0" fontName="Poppins" fontStyle="Regular"
+               fontSize="17.0" parentComponent="pnlBackground"/>
+    <Component type="ScriptSlider" id="knbMainVol" x="327.0" y="135.0" width="57.0"
+               height="60.0" numStrips="118.0" parentComponent="pnlBackground"
+               text="Gain" processorId="Simple Gain1" parameterId="Gain" bgColour="16777215"
+               itemColour="3355443" itemColour2="1118481" textColour="16777215"
+               showTextBox="0" showValuePopup="Below" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+               scaleFactor="0.449999988079071" mode="Decibel" max="36.0" suffix=" dB"
+               middlePosition="0.0" min="-100.0"/>
+    <Component type="ScriptLabel" id="txt-main-midi" x="416.0" y="119.0" text="M I D I"
+               editable="0" height="23.0" width="53.0" fontName="Poppins" fontStyle="Regular"
+               fontSize="17.0" parentComponent="pnlBackground"/>
+    <Component type="ScriptImage" id="img-midi-act" x="426.0" y="150.0" parentComponent="pnlBackground"
+               fileName="{PROJECT_FOLDER}synth_emboss_circle_blk.png" text=""
+               width="30.0" height="30.0" popupOnRightClick="0"/>
+    <Component type="ScriptFloatingTile" id="fltMidiActivity" x="434.0" y="157.0"
+               width="15.0" height="15.0" ContentType="ActivityLed" bgColour="0"
+               itemColour="4278222848" itemColour2="4294572288" Data="{&#10;  &quot;ShowMidiLabel&quot;: false,&#10;  &quot;MidiLabel&quot;: &quot;MIDI&quot;,&#10;  &quot;UseMidiPath&quot;: false,&#10;  &quot;Base64MidiPath&quot;: &quot;&quot;&#10;}"
+               textColour="0" parentComponent="pnlBackground"/>
+  </Component>
+  <Component type="ScriptImage" id="img-preset-divider2" x="304.0" y="194.0"
+             text="" width="183.0" height="12.0" fileName="{PROJECT_FOLDER}synth_divider_line_blk_horiz.png"/>
+  <Component type="ScriptLabel" id="txt-presets-selector" x="331.0" y="200.0"
+             text="P R E S E T S" editable="0" height="23.0" width="128.0"
+             fontName="Poppins" fontStyle="Regular" fontSize="17.0"/>
+  <Component type="ScriptButton" id="btnPreset0" x="360.0" y="220.0" text=""
+             width="30.0" filmstripImage="{PROJECT_FOLDER}synth_emboss_circle_blk4.png"
+             height="30.0" scaleFactor="0.300000011920929"/>
+  <Component type="ScriptLabel" id="txt-preset-prev" x="306.0" y="230.0" text="P R E V I O U S"
+             editable="0" alignment="left" height="12.0" width="50.0" fontName="Poppins"
+             fontStyle="Regular" fontSize="10.0"/>
+  <Component type="ScriptButton" id="btnPreset1" x="400.0" y="220.0" text=""
+             width="30.0" height="30.0" filmstripImage="{PROJECT_FOLDER}synth_emboss_circle_blk4.png"
+             scaleFactor="0.300000011920929"/>
+  <Component type="ScriptLabel" id="txt-preset-next" x="435.0" y="230.0" text="N E X T"
+             editable="0" alignment="left" height="12.0" width="50.0" fontName="Poppins"
+             fontStyle="Regular" fontSize="10.0"/>
+  <Component type="ScriptPanel" id="pnlPresets" x="513.0" y="34.0" width="454.0"
+             height="220.0" bgColour="9722715" itemColour="0" itemColour2="2499214"
+             textColour="16777215">
+    <Component type="ScriptFloatingTile" id="fltPresets" x="0.0" y="5.0" width="460.0"
+               height="230.0" parentComponent="pnlPresets" ContentType="PresetBrowser"
+               bgColour="16777215" itemColour="4294967295" itemColour2="4294967295"
+               Data="{&#10;  &quot;ShowSaveButton&quot;: true,&#10;  &quot;ShowExpansionsAsColumn&quot;: false,&#10;  &quot;ShowFolderButton&quot;: true,&#10;  &quot;ShowNotes&quot;: true,&#10;  &quot;ShowEditButtons&quot;: true,&#10;  &quot;EditButtonOffset&quot;: 10,&#10;  &quot;ShowAddButton&quot;: true,&#10;  &quot;ShowRenameButton&quot;: true,&#10;  &quot;ShowDeleteButton&quot;: true,&#10;  &quot;ShowSearchBar&quot;: true,&#10;  &quot;ShowFavoriteIcon&quot;: true,&#10;  &quot;FullPathFavorites&quot;: false,&#10;  &quot;ButtonsInsideBorder&quot;: false,&#10;  &quot;NumColumns&quot;: 2,&#10;  &quot;ColumnWidthRatio&quot;: [&#10;    0.3333333333333333,&#10;    0.3333333333333333,&#10;    0.3333333333333333&#10;  ],&#10;  &quot;ListAreaOffset&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;ColumnRowPadding&quot;: [&#10;    0,&#10;    0,&#10;    0,&#10;    0&#10;  ],&#10;  &quot;SearchBarBounds&quot;: [],&#10;  &quot;MoreButtonBounds&quot;: [],&#10;  &quot;SaveButtonBounds&quot;: [],&#10;  &quot;FavoriteButtonBounds&quot;: []&#10;}"
+               FontSize="12.0" Font="Poppins" itemColour3="4294967295"/>
+  </Component>
+  <Component type="ScriptComboBox" id="ComboBox1" x="123.0" y="228.0" max="5"
+             items="OSCILLATOR / AHDSR&#10;FILTER&#10;EQUALIZER&#10;DYNAMICS&#10;EFFECTS"
+             bgColour="8025908" itemColour="3606262" itemColour2="1118481"
+             fontStyle="Bold" fontName="Poppins" width="150.0" height="47.0"
+             fontSize="26.0" textColour="4293782167"/>
+  <Component type="ScriptPanel" id="Panel1" x="100.0" y="277.0" width="805.0"
+             height="375.0" bgColour="9722715" itemColour="0" itemColour2="2499214"
+             textColour="16777215">
+    <Component type="ScriptPanel" id="pnlOscillator" x="10.0" y="8.0" width="381.0"
+               height="365.0" text="" parentComponent="Panel1" bgColour="16777215"
+               itemColour="17233" itemColour2="131607" textColour="16777215">
+      <Component type="ScriptLabel" id="txt-Oscillators" x="5.0" y="0.0" parentComponent="pnlOscillator"
+                 text="O S C I L L A T O R S" editable="0" alignment="left" height="23.0"
+                 width="226.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptSlider" id="knbMix" x="158.0" y="52.0" text="" mode="NormalizedPercentage"
+                 suffix="%" middlePosition="0.5" processorId="Waveform Generator1"
+                 parameterId="Mix" width="65.0" height="65.0" parentComponent="pnlOscillator"
+                 bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.449999988079071" showTextBox="0"
+                 showValuePopup="Above"/>
+      <Component type="ScriptLabel" id="txt-OscillatorMix" x="168.0" y="107.0"
+                 parentComponent="pnlOscillator" text="M I X" editable="0" alignment="left"
+                 height="23.0" width="48.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="17.0"/>
+      <Component type="ScriptPanel" id="pnlOscillator1" x="7.0" y="30.0" width="160.0"
+                 height="335.0" parentComponent="pnlOscillator" text="" useUndoManager="1"
+                 bgColour="16777215" itemColour="484213" itemColour2="131607"
+                 textColour="16777215">
+        <Component type="ScriptLabel" id="txt-Oscillators1" x="13.0" y="0.0" parentComponent="pnlOscillator1"
+                   text="O S C I L L A T O R  1" editable="0" alignment="left" height="23.0"
+                   width="128.0" fontName="Poppins" fontStyle="Bold" fontSize="17.0"/>
+        <Component type="ScriptFloatingTile" id="fltDisplayOsc1" x="16.0" y="30.0"
+                   ContentType="Waveform" bgColour="0" itemColour="4294572288" itemColour2="16777215"
+                   textColour="0" Data="{&#10;  &quot;ProcessorId&quot;: &quot;Waveform Generator1&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+                   width="114.0" height="54.0" parentComponent="pnlOscillator1"/>
+        <Component type="ScriptImage" id="TFTScreen_Osc_1" x="3.0" y="21.0" width="140.0"
+                   height="73.0" parentComponent="pnlOscillator1" text="" fileName="{PROJECT_FOLDER}SilvrSynt_TFT_Screen_140x73_blk.png"
+                   popupOnRightClick="0"/>
+        <Component type="ScriptComboBox" id="cmbxOscl1" x="3.0" y="98.0" processorId="Waveform Generator1"
+                   parameterId="WaveForm1" height="30.0" isPluginParameter="1" items="SINE&#10;TRIANGLE&#10;SAW&#10;SQUARE&#10;NOISE&#10;TRIANGLE 2&#10;SQUARE 2&#10;TRAPEZIOD 1&#10;TRAPEZOID 2&#10;"
+                   max="9" text="" parentComponent="pnlOscillator1" width="140.0"
+                   bgColour="4294967295" itemColour="3355443" itemColour2="1118481"
+                   fontSize="12.0" fontName="Poppins"/>
+        <Component type="ScriptSlider" id="knbOsc1-Transpose" x="0.0" y="125.0"
+                   width="50.0" height="50.0" parentComponent="pnlOscillator1" text=""
+                   processorId="Waveform Generator1" parameterId="OctaveTranspose1"
+                   stepSize="1.0" max="5.0" min="-5.0" middlePosition="0.0" bgColour="16777215"
+                   itemColour="3355443" itemColour2="1118481" textColour="16777215"
+                   filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                   numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                   showValuePopup="Above"/>
+        <Component type="ScriptLabel" id="txt-Osc1-transpose" x="50.0" y="140.0"
+                   parentComponent="pnlOscillator1" text="T R A N S P O S E" editable="0"
+                   alignment="left" height="23.0" width="100.0" fontName="Poppins"
+                   fontStyle="Regular" fontSize="15.0"/>
+        <Component type="ScriptSlider" id="knbOsc1-Semitone" x="0.0" y="178.0" width="50.0"
+                   height="50.0" parentComponent="pnlOscillator1" text="" processorId="Waveform Generator1"
+                   parameterId="SemiTones1" middlePosition="0.5" bgColour="16777215"
+                   itemColour="3355443" itemColour2="1118481" textColour="16777215"
+                   filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                   numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                   showValuePopup="Above" min="-12.0" max="12.0" stepSize="1.0"/>
+        <Component type="ScriptLabel" id="txt-Osc1-semitone" x="50.0" y="193.0"
+                   parentComponent="pnlOscillator1" text="S E M I T O N E S" editable="0"
+                   alignment="left" height="23.0" width="93.0" fontName="Poppins"
+                   fontStyle="Regular" fontSize="15.0"/>
+        <Component type="ScriptSlider" id="knbOsc1Detune" x="0.0" y="231.0" width="50.0"
+                   height="50.0" parentComponent="pnlOscillator1" text="" processorId="Waveform Generator1"
+                   parameterId="Detune1" min="-100.0" max="100.0" middlePosition="0.0"
+                   bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                   textColour="16777215" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                   numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                   showValuePopup="Above"/>
+        <Component type="ScriptLabel" id="txt-Osc1-detune" x="50.0" y="246.0" parentComponent="pnlOscillator1"
+                   text="D E T U N E" editable="0" alignment="left" height="23.0"
+                   width="74.0" fontName="Poppins" fontStyle="Regular" fontSize="15.0"/>
+        <Component type="ScriptSlider" id="knbOsc1-Pan" x="0.0" y="285.0" width="50.0"
+                   height="50.0" parentComponent="pnlOscillator1" text="" processorId="Waveform Generator1"
+                   parameterId="Pan1" min="-100.0" middlePosition="0.0" mode="Pan"
+                   stepSize="1.0" max="100.0" suffix="L" bgColour="16777215" itemColour="3355443"
+                   itemColour2="1118481" textColour="16777215" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                   numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                   showValuePopup="Above"/>
+        <Component type="ScriptLabel" id="txt-Osc1-pan" x="50.0" y="300.0" parentComponent="pnlOscillator1"
+                   text="P A N" editable="0" alignment="left" height="23.0" width="46.0"
+                   fontName="Poppins" fontStyle="Regular" fontSize="15.0"/>
+      </Component>
+      <Component type="ScriptImage" id="divider-Oscillator-1" x="182.0" y="0.0"
+                 parentComponent="pnlOscillator" text="" fileName="{PROJECT_FOLDER}synth_divider_line_blk_vert3.png"
+                 width="10.0" height="48.0"/>
+      <Component type="ScriptImage" id="divider-Oscillator-2" x="182.0" y="135.0"
+                 parentComponent="pnlOscillator" text="" fileName="{PROJECT_FOLDER}synth_divider_line_blk_vert3.png"
+                 width="10.0" height="220.0"/>
+      <Component type="ScriptButton" id="btnOscl2On" x="223.0" y="4.0" width="51.0"
+                 height="28.0" parentComponent="pnlOscillator" text="" processorId="Waveform Generator1"
+                 parameterId="EnableSecondOscillator" bgColour="16777215" itemColour="4278674293"
+                 itemColour2="1118481" textColour="4284416249" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"
+                 numStrips="6.0" scaleFactor="0.3499999940395355"/>
+      <Component type="ScriptLabel" id="txt-Osc-sync" x="309.0" y="-8.0" parentComponent="pnlOscillator"
+                 text="S Y N C" editable="0" alignment="left" height="23.0" width="38.0"
+                 fontName="Poppins" fontStyle="Regular" fontSize="12.0"/>
+      <Component type="ScriptLabel" id="txt-Osc-sync-On" x="283.0" y="5.0" parentComponent="pnlOscillator"
+                 text="ON" editable="0" alignment="left" height="23.0" width="18.0"
+                 fontName="Poppins" fontStyle="Regular" fontSize="8.0"/>
+      <Component type="ScriptLabel" id="txt-Osc-sync-Off" x="356.0" y="5.0" parentComponent="pnlOscillator"
+                 text="OFF" editable="0" alignment="left" height="23.0" width="18.0"
+                 fontName="Poppins" fontStyle="Regular" fontSize="8.0"/>
+      <Component type="ScriptButton" id="btn-Osc-Sync" x="285.0" y="8.0" width="90.0"
+                 height="19.0" parentComponent="pnlOscillator" text="" processorId="Waveform Generator1"
+                 parameterId="HardSync" bgColour="16777215" itemColour="4278674293"
+                 itemColour2="1118481" textColour="4284416249" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Flip_Filmstrip4.png"
+                 numStrips="6.0" scaleFactor="0.3499999940395355"/>
+      <Component type="ScriptPanel" id="pnlOsillator2" x="212.0" y="30.0" width="161.0"
+                 height="335.0" parentComponent="pnlOscillator" text="" bgColour="16777215"
+                 itemColour="484213" itemColour2="131607" textColour="16777215">
+        <Component type="ScriptLabel" id="txt-Oscillators2" x="18.0" y="0.0" parentComponent="pnlOsillator2"
+                   text="O S C I L L A T O R  2" editable="0" alignment="left" height="23.0"
+                   width="128.0" fontName="Poppins" fontStyle="Bold" fontSize="17.0"/>
+        <Component type="ScriptFloatingTile" id="fltDisplayOsc2" x="24.0" y="30.0"
+                   ContentType="Waveform" bgColour="0" itemColour="4294572288" itemColour2="2164260863"
+                   textColour="0" Data="{&#10;  &quot;ProcessorId&quot;: &quot;Waveform Generator1&quot;,&#10;  &quot;Index&quot;: 1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+                   width="115.0" height="54.0" parentComponent="pnlOsillator2"/>
+        <Component type="ScriptImage" id="TFTScreen_Osc_2" x="11.0" y="21.0" width="140.0"
+                   height="73.0" parentComponent="pnlOsillator2" text="" fileName="{PROJECT_FOLDER}SilvrSynt_TFT_Screen_140x73_blk.png"
+                   popupOnRightClick="0"/>
+        <Component type="ScriptComboBox" id="cmbxDisplayOsc2" x="11.0" y="98.0"
+                   width="140.0" height="30.0" max="9" parentComponent="pnlOsillator2"
+                   processorId="Waveform Generator1" parameterId="WaveForm2" items="SINE&#10;TRIANGLE&#10;SAW&#10;SQUARE&#10;NOISE&#10;TRIANGLE 2&#10;SQUARE 2&#10;TRAPEZIOD 1&#10;TRAPEZOID 2"
+                   itemColour2="1118481" bgColour="4294967295" itemColour="3355443"/>
+        <Component type="ScriptSlider" id="knbOsc2-Transpose" x="8.0" y="125.0"
+                   width="50.0" height="50.0" parentComponent="pnlOsillator2" text=""
+                   processorId="Waveform Generator1" parameterId="OctaveTranspose2"
+                   min="-5.0" max="5.0" stepSize="1.0" bgColour="16777215" itemColour="3355443"
+                   itemColour2="1118481" textColour="16777215" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                   numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                   showValuePopup="Above" middlePosition="0.0"/>
+        <Component type="ScriptLabel" id="txt-Osc2-transpose" x="58.0" y="140.0"
+                   parentComponent="pnlOsillator2" text="T R A N S P O S E" editable="0"
+                   alignment="left" height="23.0" width="128.0" fontName="Poppins"
+                   fontStyle="Regular" fontSize="15.0"/>
+        <Component type="ScriptSlider" id="knbOsc2-Semitone" x="8.0" y="178.0" width="50.0"
+                   height="50.0" parentComponent="pnlOsillator2" text="" processorId="Waveform Generator1"
+                   parameterId="SemiTones2" middlePosition="0.5" bgColour="16777215"
+                   itemColour="3355443" itemColour2="1118481" textColour="16777215"
+                   filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                   numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                   showValuePopup="Above" min="-12.0" max="12.0" stepSize="1.0"/>
+        <Component type="ScriptLabel" id="txt-Osc2-semitone" x="58.0" y="193.0"
+                   parentComponent="pnlOsillator2" text="S E M I T O N E S" editable="0"
+                   alignment="left" height="23.0" width="93.0" fontName="Poppins"
+                   fontStyle="Regular" fontSize="15.0"/>
+        <Component type="ScriptSlider" id="knbOscl2-Detune" x="8.0" y="231.0" width="50.0"
+                   height="50.0" parentComponent="pnlOsillator2" text="" processorId="Waveform Generator1"
+                   parameterId="Detune2" min="-100.0" max="100.0" middlePosition="0.0"
+                   bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                   textColour="16777215" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                   numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                   showValuePopup="Above"/>
+        <Component type="ScriptLabel" id="txt-Osc2-detune" x="58.0" y="246.0" parentComponent="pnlOsillator2"
+                   text="D E T U N E" editable="0" alignment="left" height="23.0"
+                   width="74.0" fontName="Poppins" fontStyle="Regular" fontSize="15.0"/>
+        <Component type="ScriptSlider" id="knbOsc2-Pan" x="8.0" y="285.0" parentComponent="pnlOsillator2"
+                   width="50.0" height="50.0" text="" processorId="Waveform Generator1"
+                   parameterId="Pan2" mode="Pan" min="-100.0" max="100.0" stepSize="1.0"
+                   suffix="L" middlePosition="0.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                   numStrips="118.0" scaleFactor="0.4000000059604645" bgColour="16777215"
+                   itemColour="3355443" itemColour2="1118481" textColour="16777215"
+                   showTextBox="0" showValuePopup="Above"/>
+        <Component type="ScriptLabel" id="txt-Osc2-pan" x="58.0" y="300.0" parentComponent="pnlOsillator2"
+                   text="P A N" editable="0" alignment="left" height="23.0" width="46.0"
+                   fontName="Poppins" fontStyle="Regular" fontSize="15.0"/>
+      </Component>
+    </Component>
+    <Component type="ScriptImage" id="divider-Osc-adsr" x="390.0" y="-5.0" parentComponent="Panel1"
+               text="" fileName="{PROJECT_FOLDER}synth_divider_line_blk_vert3.png"
+               width="20.0" height="375.0"/>
+    <Component type="ScriptPanel" id="pnlADSR" x="410.0" y="10.0" text="" width="397.0"
+               height="365.0" parentComponent="Panel1" itemColour="17233" itemColour2="131607"
+               textColour="16777215" popupOnRightClick="0" bgColour="247545">
+      <Component type="ScriptLabel" id="txt-AHDSR" x="10.0" y="-2.0" parentComponent="pnlADSR"
+                 text="E N V E L O P E" editable="0" alignment="left" height="23.0"
+                 width="226.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptFloatingTile" id="fltAHDSR" x="55.0" y="75.0" width="282.0"
+                 height="102.0" ContentType="AHDSRGraph" bgColour="1560609312"
+                 itemColour="4294572288" itemColour2="1493172224" textColour="0"
+                 Data="{&#10;  &quot;ProcessorId&quot;: &quot;AHDSR Envelope1&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+                 itemColour3="15737121" parentComponent="pnlADSR"/>
+      <Component type="ScriptImage" id="TFTScreen_ADSR" x="16.0" y="33.0" parentComponent="pnlADSR"
+                 fileName="{PROJECT_FOLDER}SilvrSynt_TFT_Screen_360x190_blk-3.png"
+                 width="360.0" height="190.0" popupOnRightClick="0" text=""/>
+      <Component type="ScriptLabel" id="txt-ahdsr-attack" x="21.0" y="236.0" parentComponent="pnlADSR"
+                 text="A T T A C K" editable="0" height="23.0" width="74.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbAttack" x="30.0" y="252.0" middlePosition="1000.0"
+                 stepSize="1.0" max="20000.0" suffix=" ms" mode="Time" text=""
+                 defaultValue="2.0" processorId="AHDSR Envelope1" parameterId="Attack"
+                 height="50.0" width="50.0" parentComponent="pnlADSR" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" itemColour="3355443"
+                 bgColour="16777215" itemColour2="4279308561" showTextBox="0"
+                 showValuePopup="Above"/>
+      <Component type="ScriptLabel" id="txt-ahdsr-hold" x="92.0" y="236.0" parentComponent="pnlADSR"
+                 text="H O L D" editable="0" height="23.0" width="74.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbHold" x="104.0" y="252.0" middlePosition="1000.0"
+                 stepSize="1.0" max="20000.0" suffix=" ms" mode="Time" text=""
+                 defaultValue="2.0" processorId="AHDSR Envelope1" parameterId="Hold"
+                 height="50.0" width="50.0" parentComponent="pnlADSR" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" itemColour="3355443"
+                 bgColour="16777215" itemColour2="4279308561" showTextBox="0"
+                 showValuePopup="Above"/>
+      <Component type="ScriptLabel" id="txt-ahdsr-decay" x="166.0" y="236.0" parentComponent="pnlADSR"
+                 text="D E C A Y" editable="0" height="23.0" width="74.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDecay" x="178.0" y="252.0" middlePosition="1000.0"
+                 stepSize="1.0" max="20000.0" suffix=" ms" mode="Time" text=""
+                 defaultValue="300.0" processorId="AHDSR Envelope1" parameterId="Decay"
+                 height="50.0" width="50.0" parentComponent="pnlADSR" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Above"/>
+      <Component type="ScriptLabel" id="txt-ahdsr-sustain" x="238.0" y="236.0"
+                 parentComponent="pnlADSR" text="S U S T A I N" editable="0" height="23.0"
+                 width="74.0" fontName="Poppins" fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbSustain" x="252.0" y="252.0" middlePosition="-18.0"
+                 stepSize="0.1000000014901161" max="0.0" suffix=" dB" mode="Decibel"
+                 text="" min="-100.0" processorId="AHDSR Envelope1" parameterId="Sustain"
+                 defaultValue="-1.0" height="50.0" width="50.0" parentComponent="pnlADSR"
+                 bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Above"/>
+      <Component type="ScriptLabel" id="txt-ahdsr-release" x="309.0" y="236.0"
+                 parentComponent="pnlADSR" text="R E L E A S E" editable="0" height="23.0"
+                 width="85.0" fontName="Poppins" fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbRelease" x="326.0" y="252.0" middlePosition="1000.0"
+                 stepSize="1.0" max="20000.0" suffix=" ms" mode="Time" text=""
+                 defaultValue="500.0" processorId="AHDSR Envelope1" parameterId="Release"
+                 height="50.0" width="50.0" parentComponent="pnlADSR" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Above"/>
+      <Component type="ScriptSlider" id="knbAttackLevel" x="104.0" y="301.0" middlePosition="-50.0"
+                 max="0.0" suffix="db" mode="Decibel" text="" processorId="AHDSR Envelope1"
+                 parameterId="AttackLevel" height="50.0" width="50.0" parentComponent="pnlADSR"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" itemColour="3355443"
+                 bgColour="16777215" itemColour2="4279308561" showTextBox="0"
+                 showValuePopup="Above" min="-100.0" stepSize="0.1000000014901161"/>
+      <Component type="ScriptLabel" id="txt-ahdsr-attackLevel" x="-12.0" y="316.0"
+                 parentComponent="pnlADSR" text="A T T A C K  L E V E L" editable="0"
+                 height="19.0" width="121.0" fontName="Poppins" fontStyle="Regular"
+                 multiline="1" alignment="right"/>
+      <Component type="ScriptSlider" id="knbDecayCurve" x="178.0" y="301.0" middlePosition="0.5"
+                 suffix="%" mode="NormalizedPercentage" text="" defaultValue="1.0"
+                 processorId="AHDSR Envelope1" parameterId="DecayCurve" height="50.0"
+                 width="50.0" parentComponent="pnlADSR" bgColour="16777215" itemColour="3355443"
+                 itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Above"/>
+      <Component type="ScriptLabel" id="txt-ahdsr-decayCurve" x="147.0" y="343.0"
+                 parentComponent="pnlADSR" text="D E C A Y  C U R V E" editable="0"
+                 height="23.0" width="107.0" fontName="Poppins" fontStyle="Regular"/>
+      <Component type="ScriptSlider" id="knbAttackCurve" x="252.0" y="301.0" middlePosition="0.5"
+                 suffix="%" mode="NormalizedPercentage" text="" processorId="AHDSR Envelope1"
+                 parameterId="AttackCurve" height="50.0" width="50.0" parentComponent="pnlADSR"
+                 bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Above"/>
+      <Component type="ScriptLabel" id="txt-ahdsr-attackCurve" x="295.0" y="316.0"
+                 parentComponent="pnlADSR" text="A T T A C K  C U R V E" editable="0"
+                 height="23.0" width="143.0" fontName="Poppins" fontStyle="Regular"
+                 alignment="left"/>
+    </Component>
+  </Component>
+  <Component type="ScriptPanel" id="Panel2" x="100.0" y="277.0" width="805.0"
+             height="375.0" bgColour="9722715" itemColour="0" text="" itemColour2="2499214"
+             textColour="16777215" visible="0">
+    <Component type="ScriptPanel" id="pnlFilter" x="10.0" y="8.0" parentComponent="Panel2"
+               width="800.0" height="365.0" bgColour="16777215" itemColour="484213"
+               itemColour2="131607" textColour="131607">
+      <Component type="ScriptLabel" id="txt-Filter" x="5.0" y="0.0" parentComponent="pnlFilter"
+                 text="F I L T E R" editable="0" alignment="left" height="23.0"
+                 width="226.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptButton" id="btnFilterOn" x="167.0" y="0.0" processorId="Filter1"
+                 parameterId="Enabled" parentComponent="pnlFilter" text="ON / OFF"
+                 width="51.0" height="28.0" bgColour="16777215" itemColour="4278674293"
+                 itemColour2="1118481" textColour="4284416249" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"
+                 numStrips="6.0" scaleFactor="0.3499999940395355"/>
+      <Component type="ScriptComboBox" id="cmbFilterTypes" x="16.0" y="35.0" max="16"
+                 width="143.0" height="35.0" parentComponent="pnlFilter" processorId="Filter1"
+                 parameterId="Mode" items="1Pole LP&#10;1Pole HP&#10;SVF LP&#10;SVF HP&#10;SVF Notch&#10;SVF BP&#10;Allpass&#10;Moog LP&#10;Biquad LP&#10;Biquad HP&#10;Biquad LP Rez&#10;Low Shelf EQ&#10;High Shelf EQ&#10;Peak EQ&#10;Ladder 4Pole LP&#10;Ring Mod"
+                 bgColour="4294967295" itemColour="3355443" itemColour2="16776701"/>
+      <Component type="ScriptFloatingTile" id="fltFilterDisplay" x="316.0" y="65.0"
+                 width="323.0" height="116.0" ContentType="FilterDisplay" bgColour="1560609312"
+                 itemColour="4292539944" itemColour2="1493172224" Data="{&#10;  &quot;ProcessorId&quot;: &quot;Filter1&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+                 itemColour3="15737121" parentComponent="pnlFilter" textColour="16777215"/>
+      <Component type="ScriptImage" id="TFTScreen_Filter" x="269.0" y="14.0" parentComponent="pnlFilter"
+                 fileName="{PROJECT_FOLDER}SilvrSynt_TFT_Screen_360x190_blk-3.png"
+                 width="415.0" height="220.0" popupOnRightClick="0" text=""/>
+      <Component type="ScriptLabel" id="txt-FilterGain" x="316.0" y="239.0" parentComponent="pnlFilter"
+                 text="G A I N" editable="0" height="23.0" width="74.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbFilterGain" x="330.0" y="259.0" middlePosition="0.0"
+                 stepSize="0.1000000014901161" min="-18.0" max="18.0" suffix=" dB"
+                 processorId="Filter1" parameterId="Gain" mode="Decibel" text="Gain"
+                 parentComponent="pnlFilter" width="50.0" height="50.0" itemColour="3355443"
+                 itemColour2="4279308561" showTextBox="0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showValuePopup="Above"/>
+      <Component type="ScriptLabel" id="txt-FilterFrequency" x="374.0" y="239.0"
+                 parentComponent="pnlFilter" text="F R E Q U E N C Y" editable="0"
+                 height="23.0" width="121.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbFilterFrequency" x="410.0" y="259.0"
+                 text="Frequency" processorId="Filter1" parameterId="Frequency"
+                 mode="Frequency" min="20.0" max="20000.0" stepSize="1.0" suffix=" Hz"
+                 middlePosition="1500.0" parentComponent="pnlFilter" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Above" itemColour="3355443" itemColour2="4279308561"/>
+      <Component type="ScriptLabel" id="txt-FilterQ" x="479.0" y="239.0" parentComponent="pnlFilter"
+                 text="Q" editable="0" height="23.0" width="74.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbFilterQ" x="490.0" y="259.0" text="Q"
+                 processorId="Filter1" parameterId="Q" max="8.0" min="0.300000011920929"
+                 parentComponent="pnlFilter" width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Above" itemColour="3355443" itemColour2="4279308561"
+                 middlePosition="1.0"/>
+      <Component type="ScriptLabel" id="txt-FilterBiPolar" x="566.0" y="239.0"
+                 parentComponent="pnlFilter" text="B I P O L A R" editable="0"
+                 height="23.0" width="74.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbFilterBiPolar" x="576.0" y="259.0"
+                 text="Bipolar Freq Intensity" processorId="Filter1" parameterId="BipolarIntensity"
+                 min="-1.0" parentComponent="pnlFilter" width="50.0" height="50.0"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showValuePopup="Above"
+                 showTextBox="0"/>
+    </Component>
+  </Component>
+  <Component type="ScriptPanel" id="Panel3" x="100.0" y="277.0" itemColour="0"
+             width="805.0" height="375.0" bgColour="9722715" text="" itemColour2="2499214"
+             textColour="16777215" visible="0">
+    <Component type="ScriptPanel" id="pnlParametricEQ" x="10.0" y="8.0" text=""
+               width="800.0" height="365.0" parentComponent="Panel3" bgColour="16777215"
+               itemColour="484213" itemColour2="131607" textColour="131607">
+      <Component type="ScriptLabel" id="txt-Eqalizer" x="10.0" y="0.0" parentComponent="pnlParametricEQ"
+                 text="E Q U A L I Z E R" editable="0" alignment="left" height="23.0"
+                 width="226.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptButton" id="btnParaEQEnable" x="167.0" y="0.0" text="Enabled"
+                 width="51.0" processorId="Parametriq EQ1" parameterId="Enabled"
+                 parentComponent="pnlParametricEQ" height="28.0" bgColour="16777215"
+                 itemColour="4278674293" itemColour2="1118481" textColour="4284416249"
+                 numStrips="6.0" scaleFactor="0.300000011920929" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"/>
+      <Component type="ScriptComboBox" id="cmbxParaEQType" x="16.0" y="35.0" text=""
+                 processorId="Parametriq EQ1" parameterId="Type" parentComponent="pnlParametricEQ"
+                 max="5" width="143.0" height="35.0" bgColour="4294967295" itemColour="3355443"
+                 itemColour2="1118481" min="0.0" items="LOW PASS / HIGH CUT&#10;LOW CUT / HIGH PASS&#10;LOW SHELF&#10;HIGH SHELF&#10;NOTCH (BAND)&#10;&#10;"/>
+      <Component type="ScriptFloatingTile" id="fltParaEQDisplay2" x="318.0" y="66.0"
+                 parentComponent="pnlParametricEQ" ContentType="DraggableFilterPanel"
+                 bgColour="0" itemColour="4292539944" itemColour2="855638016"
+                 Data="{&#10;  &quot;ProcessorId&quot;: &quot;Parametriq EQ1&quot;,&#10;  &quot;Index&quot;: -1,&#10;  &quot;FollowWorkspace&quot;: false&#10;}"
+                 width="318.0" height="113.0"/>
+      <Component type="ScriptImage" id="TFTScreen_EQ" x="269.0" y="14.0" parentComponent="pnlParametricEQ"
+                 fileName="{PROJECT_FOLDER}SilvrSynt_TFT_Screen_360x190_blk-3.png"
+                 width="415.0" height="220.0" popupOnRightClick="0" text=""/>
+      <Component type="ScriptSlider" id="knbParaEQGain" x="376.0" y="259.0" text="Gain 0"
+                 processorId="Parametriq EQ1" mode="Decibel" stepSize="0.1000000014901161"
+                 suffix=" dB" middlePosition="0.5" parentComponent="pnlParametricEQ"
+                 width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" showTextBox="0" showValuePopup="Above"
+                 parameterId="Gain" min="-24.0" max="24.0"/>
+      <Component type="ScriptLabel" id="txt-eq-gain" x="344.0" y="239.0" parentComponent="pnlParametricEQ"
+                 text="G A I N" editable="0" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbParaEQFrequency" x="456.0" y="259.0"
+                 parentComponent="pnlParametricEQ" text="Frequency 0" processorId="Parametriq EQ1"
+                 mode="Frequency" stepSize="1.0" suffix=" Hz" middlePosition="1500.0"
+                 width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" showTextBox="0" showValuePopup="Above"
+                 min="20.0" max="20000.0" parameterId="Freq"/>
+      <Component type="ScriptLabel" id="txt-eq-Freq" x="426.0" y="239.0" parentComponent="pnlParametricEQ"
+                 text="F R E Q U E N C Y" editable="0" height="23.0" width="110.0"
+                 fontName="Poppins" fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbParaEQQ" x="536.0" y="259.0" text="Q 0"
+                 processorId="Parametriq EQ1" parentComponent="pnlParametricEQ"
+                 width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" showTextBox="0" showValuePopup="Above"
+                 parameterId="Q" middlePosition="1.0" min="0.1000000014901161"
+                 max="8.0"/>
+      <Component type="ScriptLabel" id="txt-eq-q" x="547.0" y="239.0" parentComponent="pnlParametricEQ"
+                 text="Q" editable="0" height="23.0" width="27.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+    </Component>
+  </Component>
+  <Component type="ScriptPanel" id="Panel4" x="100.0" y="277.0" text="" width="805.0"
+             height="375.0" textColour="16777215" itemColour2="2499214" itemColour="0"
+             bgColour="9722715" visible="0">
+    <Component type="ScriptImage" id="divider-vert-dynamics" x="396.0" y="-5.0"
+               text="" fileName="{PROJECT_FOLDER}synth_divider_line_blk_vert3.png"
+               width="20.0" height="375.0" parentComponent="Panel4"/>
+    <Component type="ScriptImage" id="divider-horiz-dynamics" x="0.0" y="185.0"
+               text="" width="403.0" height="10.0" fileName="{PROJECT_FOLDER}synth_divider_line_blk_horiz.png"
+               parentComponent="Panel4" enabled="0"/>
+    <Component type="ScriptImage" id="divider-horiz-dynamics1" x="410.0" y="185.0"
+               text="" width="403.0" height="10.0" fileName="{PROJECT_FOLDER}synth_divider_line_blk_horiz.png"
+               parentComponent="Panel4" enabled="0"/>
+    <Component type="ScriptPanel" id="pnlDynamicsComp" x="10.0" y="10.0" parentComponent="Panel4"
+               width="390.0" height="180.0" text="" bgColour="16777215" itemColour="484213"
+               itemColour2="131607" textColour="16777215">
+      <Component type="ScriptButton" id="btnDynamicsCompOn" x="0.0" y="3.0" parentComponent="pnlDynamicsComp"
+                 text="ON / OFF" processorId="Dynamics1" parameterId="CompressorEnabled"
+                 width="40.0" height="23.0" bgColour="16777215" itemColour="4278674293"
+                 itemColour2="1118481" textColour="4284416249" numStrips="6.0"
+                 scaleFactor="0.300000011920929" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp" x="45.0" y="2.0" parentComponent="pnlDynamicsComp"
+                 text="C O M P R E S S O R" editable="0" alignment="left" height="23.0"
+                 width="191.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp-mkup-on" x="241.0" y="2.0"
+                 parentComponent="pnlDynamicsComp" text="ON" editable="0" alignment="left"
+                 height="23.0" width="18.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="8.0"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp-mkup-off" x="314.0" y="2.0"
+                 parentComponent="pnlDynamicsComp" text="OFF" editable="0" alignment="left"
+                 height="23.0" width="18.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="8.0"/>
+      <Component type="ScriptButton" id="btnDynamicsCompMkup" x="243.0" y="5.0"
+                 parentComponent="pnlDynamicsComp" text="MAKEUP" processorId="Dynamics1"
+                 parameterId="CompressorMakeup" bgColour="16777215" width="90.0"
+                 height="19.0" itemColour="4278674293" itemColour2="1118481" textColour="4284416249"
+                 numStrips="6.0" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Flip_Filmstrip4.png"
+                 scaleFactor="0.3499999940395355"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp-mkup" x="330.0" y="2.0" parentComponent="pnlDynamicsComp"
+                 text="M A K E U P" editable="0" alignment="left" height="23.0"
+                 width="60.0" fontName="Poppins" fontStyle="Regular" fontSize="12.0"/>
+      <Component type="ScriptSlider" id="knbDynamicsCompThresh" x="10.0" y="42.0"
+                 parentComponent="pnlDynamicsComp" processorId="Dynamics1" text="THRESHOLD"
+                 parameterId="CompressorThreshold" mode="Decibel" min="-100.0"
+                 max="0.0" stepSize="0.1000000014901161" suffix=" dB" middlePosition="-40.0"
+                 bgColour="16777215" width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp-thresh" x="60.0" y="57.0"
+                 parentComponent="pnlDynamicsComp" text="T H R E S H O L D" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDynamicsCompAtk" x="222.0" y="42.0"
+                 parentComponent="pnlDynamicsComp" text="ATTACK" processorId="Dynamics1"
+                 parameterId="CompressorAttack" mode="Time" max="100.0" stepSize="1.0"
+                 suffix=" ms" middlePosition="10.0" bgColour="16777215" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp-attack" x="272.0" y="57.0"
+                 parentComponent="pnlDynamicsComp" text="A T T A C K" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDynamicsCompRel" x="10.0" y="110.0"
+                 parentComponent="pnlDynamicsComp" text="RELEASE" processorId="Dynamics1"
+                 parameterId="CompressorRelease" mode="Time" max="300.0" stepSize="1.0"
+                 suffix=" ms" middlePosition="10.0" bgColour="16777215" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp-release" x="60.0" y="125.0"
+                 parentComponent="pnlDynamicsComp" text="R E L E A S E" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0" itemColour2="4227857917"/>
+      <Component type="ScriptSlider" id="knbDynamicsCompRatio" x="222.0" y="110.0"
+                 parentComponent="pnlDynamicsComp" text="RATIO" processorId="Dynamics1"
+                 parameterId="CompressorRatio" min="1.0" max="32.0" middlePosition="4.0"
+                 bgColour="16777215" width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp-ratio" x="272.0" y="125.0"
+                 parentComponent="pnlDynamicsComp" text="R A T I O" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+    </Component>
+    <Component type="ScriptPanel" id="pnlDynamicsLimiter" x="416.0" y="10.0"
+               parentComponent="Panel4" width="390.0" height="180.0" text=""
+               bgColour="16777215" itemColour="484213" itemColour2="131607"
+               textColour="16777215">
+      <Component type="ScriptButton" id="btnDynamicLimterOn" x="10.0" y="3.0"
+                 parentComponent="pnlDynamicsLimiter" text="ON / OFF" processorId="Dynamics1"
+                 parameterId="LimiterEnabled" width="40.0" height="23.0" bgColour="16777215"
+                 itemColour="4278674293" itemColour2="1118481" textColour="4284416249"
+                 numStrips="6.0" scaleFactor="0.300000011920929" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"/>
+      <Component type="ScriptLabel" id="txt-dyn-limter" x="55.0" y="2.0" parentComponent="pnlDynamicsLimiter"
+                 text="L I M I T E R" editable="0" alignment="left" height="23.0"
+                 width="173.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptLabel" id="txt-dyn-lmtr-mkup-on" x="227.0" y="2.0"
+                 parentComponent="pnlDynamicsLimiter" text="ON" editable="0" alignment="left"
+                 height="23.0" width="18.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="8.0"/>
+      <Component type="ScriptLabel" id="txt-dyn-lmtr-mkup-off" x="300.0" y="2.0"
+                 parentComponent="pnlDynamicsLimiter" text="OFF" editable="0"
+                 alignment="left" height="23.0" width="18.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="8.0"/>
+      <Component type="ScriptButton" id="btnDynamicsLimitMkup" x="229.0" y="5.0"
+                 parentComponent="pnlDynamicsLimiter" text="MAKEUP" processorId="Dynamics1"
+                 parameterId="LimiterMakeup" bgColour="16777215" width="90.0"
+                 height="19.0" itemColour="4278674293" itemColour2="1118481" textColour="4284416249"
+                 filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Flip_Filmstrip4.png"
+                 numStrips="6.0" scaleFactor="0.3499999940395355"/>
+      <Component type="ScriptLabel" id="txt-dyn-comp-mkup1" x="318.0" y="2.0"
+                 parentComponent="pnlDynamicsLimiter" text="M A K E U P" editable="0"
+                 alignment="left" height="23.0" width="60.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="12.0"/>
+      <Component type="ScriptSlider" id="knbDynamicsLimitThresh" x="10.0" y="42.0"
+                 parentComponent="pnlDynamicsLimiter" text="THRESHOLD" processorId="Dynamics1"
+                 parameterId="LimiterThreshold" mode="Decibel" min="-100.0" max="0.0"
+                 stepSize="0.1000000014901161" suffix=" dB" middlePosition="-40.0"
+                 bgColour="16777215" width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-lmtr-thresh" x="60.0" y="57.0"
+                 parentComponent="pnlDynamicsLimiter" text="T H R E S H O L D"
+                 editable="0" alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDynamicsLimitAtk" x="208.0" y="42.0"
+                 parentComponent="pnlDynamicsLimiter" text="ATTACK" processorId="Dynamics1"
+                 parameterId="LimiterAttack" mode="Time" max="100.0" stepSize="1.0"
+                 suffix=" ms" middlePosition="15.0" bgColour="16777215" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-lmtr-attack" x="258.0" y="57.0"
+                 parentComponent="pnlDynamicsLimiter" text="A T T A C K" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDynamicsLimitRel" x="10.0" y="110.0"
+                 parentComponent="pnlDynamicsLimiter" text="RELEASE" processorId="Dynamics1"
+                 parameterId="LimiterRelease" mode="Time" max="300.0" stepSize="1.0"
+                 suffix=" ms" middlePosition="10.0" bgColour="16777215" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-lmtr-release" x="60.0" y="125.0"
+                 parentComponent="pnlDynamicsLimiter" text="R E L E A S E" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+    </Component>
+    <Component type="ScriptPanel" id="pnlDynamicsGate" x="10.0" y="198.0" parentComponent="Panel4"
+               width="390.0" height="170.0" text="" bgColour="16777215" itemColour="484213"
+               itemColour2="131607" textColour="16777215">
+      <Component type="ScriptButton" id="btnDynamicsGateOn" x="0.0" y="3.0" parentComponent="pnlDynamicsGate"
+                 text="ON / OFF" processorId="Dynamics1" parameterId="GateEnabled"
+                 width="40.0" height="23.0" bgColour="16777215" itemColour="4278674293"
+                 itemColour2="1118481" textColour="4284416249" numStrips="6.0"
+                 scaleFactor="0.300000011920929" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"/>
+      <Component type="ScriptLabel" id="txt-dyn-gate" x="50.0" y="3.0" parentComponent="pnlDynamicsGate"
+                 text="G A T E" editable="0" alignment="left" height="23.0" width="114.0"
+                 fontSize="25.0" fontName="Poppins" fontStyle="Bold" textColour="4282002677"/>
+      <Component type="ScriptSlider" id="knbDynamicsGateThresh" x="10.0" y="40.0"
+                 parentComponent="pnlDynamicsGate" text="THRESHOLD" processorId="Dynamics1"
+                 parameterId="GateThreshold" min="-100.0" max="0.0" mode="Decibel"
+                 middlePosition="-50.0" bgColour="16777215" width="50.0" height="50.0"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-gate-thresh" x="60.0" y="55.0"
+                 parentComponent="pnlDynamicsGate" text="T H R E S H O L D" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDynamicsGateAttk" x="222.0" y="40.0"
+                 parentComponent="pnlDynamicsGate" text="ATTACK" processorId="Dynamics1"
+                 parameterId="GateAttack" mode="Time" max="100.0" stepSize="1.0"
+                 suffix=" ms" middlePosition="10.0" bgColour="16777215" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-gate-attack" x="272.0" y="55.0"
+                 parentComponent="pnlDynamicsGate" text="A T T A C K" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDynamicsGateRel" x="10.0" y="100.0"
+                 parentComponent="pnlDynamicsGate" text="RELEASE" processorId="Dynamics1"
+                 parameterId="GateRelease" mode="Time" max="300.0" stepSize="1.0"
+                 suffix=" ms" middlePosition="10.0" bgColour="16777215" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-dyn-gate-release" x="60.0" y="115.0"
+                 parentComponent="pnlDynamicsGate" text="R E L E A S E" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+    </Component>
+    <Component type="ScriptPanel" id="pnlDynamicsSaturator" x="416.0" y="198.0"
+               parentComponent="Panel4" width="390.0" height="170.0" text=""
+               bgColour="16777215" itemColour="484213" itemColour2="131607"
+               textColour="16777215">
+      <Component type="ScriptButton" id="btnDynamicSaturatorOn" x="10.0" y="3.0"
+                 parentComponent="pnlDynamicsSaturator" text="ON / OFF" processorId="Dynamics1"
+                 parameterId="LimiterEnabled" width="40.0" height="23.0" bgColour="16777215"
+                 itemColour="4278674293" itemColour2="1118481" textColour="4284416249"
+                 numStrips="6.0" scaleFactor="0.300000011920929" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"
+                 visible="0"/>
+      <Component type="ScriptLabel" id="txt-dyn-Saturator" x="55.0" y="2.0" parentComponent="pnlDynamicsSaturator"
+                 text="S A T U R A T O R" editable="0" alignment="left" height="23.0"
+                 width="173.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 visible="0"/>
+      <Component type="ScriptSlider" id="btnDynamicSaturator-Saturator" x="10.0"
+                 y="42.0" parentComponent="pnlDynamicsSaturator" text="THRESHOLD"
+                 processorId="Dynamics1" parameterId="LimiterThreshold" mode="Decibel"
+                 min="-100.0" max="0.0" stepSize="0.1000000014901161" suffix=" dB"
+                 middlePosition="-40.0" bgColour="16777215" width="50.0" height="50.0"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"
+                 visible="0"/>
+      <Component type="ScriptLabel" id="txt-dyn-satur-saturation" x="60.0" y="57.0"
+                 parentComponent="pnlDynamicsSaturator" text="S A T U R A T I O N"
+                 editable="0" alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0" visible="0"/>
+      <Component type="ScriptSlider" id="btnDynamicSaturatorWetAmnt" x="208.0"
+                 y="42.0" parentComponent="pnlDynamicsSaturator" text="ATTACK"
+                 processorId="Dynamics1" parameterId="LimiterAttack" mode="Time"
+                 max="100.0" stepSize="1.0" suffix=" ms" middlePosition="15.0"
+                 bgColour="16777215" width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"
+                 visible="0"/>
+      <Component type="ScriptLabel" id="txt-dyn-satur-wetamount" x="258.0" y="57.0"
+                 parentComponent="pnlDynamicsSaturator" text="W E T  A M O U N T"
+                 editable="0" alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0" visible="0"/>
+      <Component type="ScriptSlider" id="btnDynamicSaturatorPreGain" x="10.0"
+                 y="110.0" parentComponent="pnlDynamicsSaturator" text="" processorId="Dynamics1"
+                 parameterId="LimiterRelease" mode="Time" max="300.0" stepSize="1.0"
+                 suffix=" ms" middlePosition="10.0" bgColour="16777215" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"
+                 visible="0"/>
+      <Component type="ScriptLabel" id="txt-dyn-satu-PreGain" x="60.0" y="125.0"
+                 parentComponent="pnlDynamicsSaturator" text="P R E  G A I N"
+                 editable="0" alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0" visible="0"/>
+      <Component type="ScriptSlider" id="btnDynamicSaturatorPostGain" x="208.0"
+                 y="110.0" parentComponent="pnlDynamicsSaturator" text="" processorId="Dynamics1"
+                 parameterId="LimiterRelease" mode="Time" max="300.0" stepSize="1.0"
+                 suffix=" ms" middlePosition="10.0" bgColour="16777215" width="50.0"
+                 height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" showTextBox="0" showValuePopup="Below" scaleFactor="0.4000000059604645"
+                 visible="0"/>
+      <Component type="ScriptLabel" id="txt-dyn-satu-PostGain" x="258.0" y="125.0"
+                 parentComponent="pnlDynamicsSaturator" text="P O S T  G A I N"
+                 editable="0" alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0" visible="0"/>
+    </Component>
+  </Component>
+  <Component type="ScriptPanel" id="Panel5" x="100.0" y="277.0" width="805.0"
+             height="375.0" itemColour="0" text="" bgColour="9722715" itemColour2="2499214"
+             textColour="16777215" visible="0">
+    <Component type="ScriptImage" id="divider-vert-fx-delay" x="190.0" y="3.0"
+               parentComponent="Panel5" text="" fileName="{PROJECT_FOLDER}synth_divider_line_blk_vert3.png"
+               width="10.0" height="50.0"/>
+    <Component type="ScriptImage" id="divider-vert-fx-delay1" x="190.0" y="123.0"
+               parentComponent="Panel5" text="" fileName="{PROJECT_FOLDER}synth_divider_line_blk_vert3.png"
+               width="10.0" height="50.0"/>
+    <Component type="ScriptImage" id="divider-vert-delayvert" x="396.0" y="-5.0"
+               text="" fileName="{PROJECT_FOLDER}synth_divider_line_blk_vert3.png"
+               width="20.0" height="375.0" parentComponent="Panel5"/>
+    <Component type="ScriptImage" id="divider-vert-delayhorz1" x="0.0" y="185.0"
+               text="" width="403.0" height="10.0" fileName="{PROJECT_FOLDER}synth_divider_line_blk_horiz.png"
+               parentComponent="Panel5" enabled="0"/>
+    <Component type="ScriptImage" id="divider-vert-delayhorz2" x="410.0" y="185.0"
+               text="" width="403.0" height="10.0" fileName="{PROJECT_FOLDER}synth_divider_line_blk_horiz.png"
+               parentComponent="Panel5" enabled="0"/>
+    <Component type="ScriptPanel" id="pnlDelay" x="10.0" y="10.0" width="390.0"
+               height="180.0" text="" parentComponent="Panel5" bgColour="16777215"
+               itemColour="484213" itemColour2="131607" textColour="16777215">
+      <Component type="ScriptButton" id="btnDelayPower" x="0.0" y="3.0" text="Enabled"
+                 processorId="Delay1" parameterId="Enabled" parentComponent="pnlDelay"
+                 bgColour="16777215" itemColour="484213" itemColour2="1118481"
+                 height="23.0" width="40.0" numStrips="6.0" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"
+                 scaleFactor="0.300000011920929"/>
+      <Component type="ScriptLabel" id="txt-fx-delay" x="45.0" y="2.0" parentComponent="pnlDelay"
+                 text="D E L A Y" editable="0" alignment="left" height="23.0"
+                 width="114.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptLabel" id="txt-fx-tempo sync-On" x="207.0" y="2.0"
+                 parentComponent="pnlDelay" text="ON" editable="0" alignment="left"
+                 height="23.0" width="18.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="8.0"/>
+      <Component type="ScriptLabel" id="txt-fx-tempo-sync-Off" x="280.0" y="2.0"
+                 parentComponent="pnlDelay" text="OFF" editable="0" alignment="left"
+                 height="23.0" width="18.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="8.0"/>
+      <Component type="ScriptButton" id="btn-Osc-Sync1" x="209.0" y="5.0" width="90.0"
+                 height="19.0" parentComponent="pnlDelay" text="TempoSync" processorId="Delay1"
+                 parameterId="TempoSync" bgColour="16777215" itemColour="4278674293"
+                 itemColour2="1118481" textColour="4284416249" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Flip_Filmstrip4.png"
+                 numStrips="6.0" scaleFactor="0.3499999940395355"/>
+      <Component type="ScriptLabel" id="txt-tempo-sync-fx" x="280.0" y="2.0" parentComponent="pnlDelay"
+                 text="T E M P O  S Y N C" editable="0" alignment="right" height="23.0"
+                 width="100.0" fontName="Poppins" fontStyle="Regular" fontSize="12.0"/>
+      <Component type="ScriptSlider" id="knbDelayLeft" x="10.0" y="42.0" parentComponent="pnlDelay"
+                 text="Left Delay" processorId="Delay1" parameterId="DelayTimeLeft"
+                 max="18.0" suffix=" ms" middlePosition="9.0" mode="TempoSync"
+                 showTextBox="0" bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 width="50.0" height="50.0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showValuePopup="Below"/>
+      <Component type="ScriptLabel" id="txt-fx-delay-left" x="60.0" y="57.0" parentComponent="pnlDelay"
+                 text="L E F T  D E L A Y" editable="0" alignment="left" height="23.0"
+                 width="110.0" fontName="Poppins" fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDelayFeedbackLeft" x="10.0" y="110.0"
+                 parentComponent="pnlDelay" text="Left Feedback" processorId="Delay1"
+                 parameterId="FeedbackLeft" width="50.0" height="50.0" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Below" mode="NormalizedPercentage" suffix="%"
+                 middlePosition="0.5"/>
+      <Component type="ScriptLabel" id="txt-fx-delay-left-feedback" x="60.0" y="125.0"
+                 parentComponent="pnlDelay" text="F E E D B A C K" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDelayMix" x="160.0" y="43.0" text="Mix"
+                 processorId="Delay1" parameterId="Mix" parentComponent="pnlDelay"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" width="50.0" height="50.0" scaleFactor="0.4000000059604645"
+                 showTextBox="0" itemColour="3355443" bgColour="16777215" itemColour2="1118481"
+                 showValuePopup="Above" mode="NormalizedPercentage" suffix="%"
+                 middlePosition="0.5"/>
+      <Component type="ScriptLabel" id="txt-fx-delay-Mix" x="165.0" y="90.0" parentComponent="pnlDelay"
+                 text="M I X" editable="0" alignment="left" height="23.0" width="48.0"
+                 fontName="Poppins" fontStyle="Regular" fontSize="17.0"/>
+      <Component type="ScriptSlider" id="knbDelayRight" x="222.0" y="42.0" parentComponent="pnlDelay"
+                 text="Right Delay" processorId="Delay1" parameterId="DelayTimeRight"
+                 mode="TempoSync" max="18.0" stepSize="1.0" middlePosition="9.0"
+                 width="50.0" height="50.0" bgColour="16777215" itemColour="3355443"
+                 itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Below"/>
+      <Component type="ScriptLabel" id="txt-fx-delay-right" x="272.0" y="57.0"
+                 parentComponent="pnlDelay" text="R I G H T  D E L A Y" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbDelayFeedbackRight" x="222.0" y="110.0"
+                 parentComponent="pnlDelay" text="Right Feedback" processorId="Delay1"
+                 parameterId="FeedbackRight" width="50.0" height="50.0" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showValuePopup="Below"
+                 showTextBox="0" mode="NormalizedPercentage" suffix="%" middlePosition="0.5"/>
+      <Component type="ScriptLabel" id="txt-fx-delay-right-feedback" x="272.0"
+                 y="125.0" parentComponent="pnlDelay" text="F E E D B A C K" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+    </Component>
+    <Component type="ScriptPanel" id="pnlReverb" x="10.0" y="198.0" text=""
+               width="390.0" height="170.0" parentComponent="Panel5" itemColour="484213"
+               bgColour="16777215" itemColour2="131607" textColour="16711423">
+      <Component type="ScriptButton" id="btnReverbPower" x="0.0" y="3.0" text="Enabled"
+                 processorId="Simple Reverb1" parameterId="Enabled" parentComponent="pnlReverb"
+                 width="40.0" height="23.0" bgColour="16777215" itemColour="4278674293"
+                 itemColour2="1118481" textColour="4284416249" filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"
+                 numStrips="6.0" scaleFactor="0.300000011920929"/>
+      <Component type="ScriptLabel" id="txt-fx-Reverb" x="45.0" y="2.0" parentComponent="pnlReverb"
+                 text="R E V E R B" editable="0" alignment="left" height="23.0"
+                 width="114.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptSlider" id="knbReverbDryWet" x="10.0" y="40.0" text="Wet Level"
+                 processorId="Simple Reverb1" parameterId="WetLevel" parentComponent="pnlReverb"
+                 width="50.0" height="50.0" showTextBox="0" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showValuePopup="Below"
+                 bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 mode="NormalizedPercentage" suffix="%" middlePosition="0.5"/>
+      <Component type="ScriptLabel" id="txt-fx-reverb-DryWet" x="60.0" y="55.0"
+                 parentComponent="pnlReverb" text="D R Y / W E T" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbReverbRoomSize" x="10.0" y="100.0"
+                 text="Room Size" processorId="Simple Reverb1" parameterId="RoomSize"
+                 parentComponent="pnlReverb" width="50.0" height="50.0" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" showTextBox="0"
+                 showValuePopup="Below" mode="NormalizedPercentage" suffix="%"
+                 middlePosition="0.5"/>
+      <Component type="ScriptLabel" id="txt-fx-reverb-RoomSize" x="60.0" y="115.0"
+                 parentComponent="pnlReverb" text="R O O M  S I Z E" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbReverbStereoWidth" x="222.0" y="40.0"
+                 parentComponent="pnlReverb" text="Stereo Width" processorId="Simple Reverb1"
+                 parameterId="Width" width="50.0" showTextBox="0" showValuePopup="Below"
+                 height="50.0" bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" mode="NormalizedPercentage"
+                 suffix="%" middlePosition="0.5"/>
+      <Component type="ScriptLabel" id="txt-fx-reverb-StereWidth" x="272.0" y="55.0"
+                 parentComponent="pnlReverb" text="S T E R E O  W I D T H" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbReverbDamping" x="222.0" y="100.0"
+                 parentComponent="pnlReverb" text="Damping" processorId="Simple Reverb1"
+                 parameterId="Damping" width="50.0" showTextBox="0" showValuePopup="Below"
+                 height="50.0" bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645" mode="NormalizedPercentage"
+                 suffix="%" middlePosition="0.5"/>
+      <Component type="ScriptLabel" id="txt-fx-reverb-Damping" x="272.0" y="115.0"
+                 parentComponent="pnlReverb" text="D A M P I N G" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+    </Component>
+    <Component type="ScriptPanel" id="pnlChorus" x="416.0" y="10.0" width="390.0"
+               height="180.0" parentComponent="Panel5" text="" bgColour="16777215"
+               itemColour="484213" itemColour2="131607" textColour="131607">
+      <Component type="ScriptButton" id="btnChorusOn" x="10.0" y="3.0" parentComponent="pnlChorus"
+                 text="Enabled" processorId="Chorus1" parameterId="Enabled" height="23.0"
+                 bgColour="16777215" itemColour="4278674293" itemColour2="1118481"
+                 textColour="4284416249" width="40.0" numStrips="6.0" scaleFactor="0.300000011920929"
+                 filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"/>
+      <Component type="ScriptLabel" id="txt-fx-Chorus" x="55.0" y="2.0" parentComponent="pnlChorus"
+                 text="C H O R U S" editable="0" alignment="left" height="23.0"
+                 width="114.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptSlider" id="knbChorusRate" x="10.0" y="42.0" processorId="Chorus1"
+                 parameterId="Rate" text="Rate" parentComponent="pnlChorus" mode="NormalizedPercentage"
+                 suffix="%" middlePosition="0.5" showValuePopup="Below" showTextBox="0"
+                 width="50.0" height="50.0" bgColour="16777215" itemColour="3355443"
+                 itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-fx-chorus-Rate" x="60.0" y="57.0"
+                 parentComponent="pnlChorus" text="R A T E" editable="0" alignment="left"
+                 height="23.0" width="110.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbChorusWidth" x="10.0" y="110.0" parentComponent="pnlChorus"
+                 text="Width" processorId="Chorus1" parameterId="Width" mode="NormalizedPercentage"
+                 suffix="%" middlePosition="0.5" width="50.0" height="50.0" showValuePopup="Below"
+                 showTextBox="0" bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-fx-chorus-width" x="60.0" y="125.0"
+                 parentComponent="pnlChorus" text="W I D T H" editable="0" alignment="left"
+                 height="23.0" width="110.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbChorusFeedback" x="208.0" y="42.0"
+                 parentComponent="pnlChorus" text="Feedback" processorId="Chorus1"
+                 parameterId="Feedback" mode="NormalizedPercentage" suffix="%"
+                 middlePosition="0.5" width="50.0" height="50.0" showValuePopup="Below"
+                 showTextBox="0" bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-fx-chorus-feedback" x="258.0" y="57.0"
+                 parentComponent="pnlChorus" text="F E E D B A C K" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbChorusDelay" x="208.0" y="110.0" parentComponent="pnlChorus"
+                 text="Delay" processorId="Chorus1" parameterId="Delay" middlePosition="0.5"
+                 width="50.0" height="50.0" showValuePopup="Below" showTextBox="0"
+                 bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-fx-chorus-delay" x="258.0" y="125.0"
+                 parentComponent="pnlChorus" text="D E L A Y" editable="0" alignment="left"
+                 height="23.0" width="110.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="15.0"/>
+    </Component>
+    <Component type="ScriptPanel" id="pnlPhaser" x="416.0" y="198.0" width="390.0"
+               height="170.0" text="" parentComponent="Panel5" bgColour="16777215"
+               itemColour="484213" itemColour2="131607" textColour="131607">
+      <Component type="ScriptButton" id="btnPhaserOn" x="10.0" y="3.0" text="Enabled"
+                 processorId="Phase FX1" parameterId="Enabled" parentComponent="pnlPhaser"
+                 height="23.0" bgColour="16777215" itemColour="4278674293" itemColour2="1118481"
+                 textColour="4284416249" width="40.0" numStrips="6.0" scaleFactor="0.300000011920929"
+                 filmstripImage="{PROJECT_FOLDER}Switch_On_Off_Gold_Circle_Filmstrip1.png"/>
+      <Component type="ScriptLabel" id="txt-fx-Phaser" x="55.0" y="2.0" parentComponent="pnlPhaser"
+                 text="P H A S E R" editable="0" alignment="left" height="23.0"
+                 width="114.0" fontSize="25.0" fontName="Poppins" fontStyle="Bold"
+                 textColour="4282002677"/>
+      <Component type="ScriptSlider" id="knbPhaserFreq1" x="10.0" y="40.0" text="Frequency1"
+                 processorId="Phase FX1" parameterId="Frequency1" mode="Frequency"
+                 min="20.0" max="20000.0" stepSize="1.0" suffix=" Hz" middlePosition="1500.0"
+                 parentComponent="pnlPhaser" width="50.0" height="50.0" showValuePopup="Below"
+                 showTextBox="0" bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-fx-phaser-Freq1" x="60.0" y="55.0"
+                 parentComponent="pnlPhaser" text="F R E Q U E N C Y  1" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbPhaserFreq2" x="10.0" y="100.0" text="Frequency2"
+                 processorId="Phase FX1" parameterId="Frequency2" mode="Frequency"
+                 min="20.0" max="20000.0" stepSize="1.0" suffix=" Hz" middlePosition="1500.0"
+                 parentComponent="pnlPhaser" width="50.0" height="50.0" showValuePopup="Below"
+                 showTextBox="0" bgColour="16777215" itemColour="3355443" itemColour2="1118481"
+                 filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-fx-phaser-Freq2" x="60.0" y="115.0"
+                 parentComponent="pnlPhaser" text="F R E Q U E N C Y  2" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbPhaserFeedbk" x="208.0" y="40.0" text="Feedback"
+                 processorId="Phase FX1" parameterId="Feedback" mode="NormalizedPercentage"
+                 suffix="%" middlePosition="0.5" parentComponent="pnlPhaser" width="50.0"
+                 height="50.0" showValuePopup="Below" showTextBox="0" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-fx-phaser-feedback" x="258.0" y="55.0"
+                 parentComponent="pnlPhaser" text="F E E D B A C K" editable="0"
+                 alignment="left" height="23.0" width="110.0" fontName="Poppins"
+                 fontStyle="Regular" fontSize="15.0"/>
+      <Component type="ScriptSlider" id="knbPhaserMix" x="208.0" y="100.0" text="Mix"
+                 processorId="Phase FX1" parameterId="Mix" mode="NormalizedPercentage"
+                 suffix="%" middlePosition="0.5" parentComponent="pnlPhaser" width="50.0"
+                 height="50.0" showValuePopup="Below" showTextBox="0" bgColour="16777215"
+                 itemColour="3355443" itemColour2="1118481" filmstripImage="{PROJECT_FOLDER}synth_button_filmstip_gld_v5.png"
+                 numStrips="118.0" scaleFactor="0.4000000059604645"/>
+      <Component type="ScriptLabel" id="txt-fx-phaser-mix" x="258.0" y="115.0"
+                 parentComponent="pnlPhaser" text="M I X" editable="0" alignment="left"
+                 height="23.0" width="110.0" fontName="Poppins" fontStyle="Regular"
+                 fontSize="15.0"/>
+    </Component>
+  </Component>
+  <Component type="ScriptPanel" id="pnlKeyboard" x="112.0" y="659.0" width="783.0"
+             height="51.0" text="" bgColour="16777215" itemColour="0" itemColour2="0"
+             textColour="16777215">
+    <Component type="ScriptFloatingTile" id="Keyboard" x="0.0" y="-15.0" width="790.0"
+               height="80.0" ContentType="Keyboard" bgColour="7392620" itemColour="16777215"
+               itemColour2="4294967295" textColour="0" Data="{&#10;  &quot;KeyWidth&quot;: 14.0,&#10;  &quot;DisplayOctaveNumber&quot;: false,&#10;  &quot;LowKey&quot;: 24,&#10;  &quot;HiKey&quot;: 127,&#10;  &quot;CustomGraphics&quot;: false,&#10;  &quot;DefaultAppearance&quot;: true,&#10;  &quot;BlackKeyRatio&quot;: 0.699999988079071,&#10;  &quot;ToggleMode&quot;: false,&#10;  &quot;MidiChannel&quot;: 1,&#10;  &quot;UseVectorGraphics&quot;: true,&#10;  &quot;UseFlatStyle&quot;: false,&#10;  &quot;MPEKeyboard&quot;: false,&#10;  &quot;MPEStartChannel&quot;: 2,&#10;  &quot;MPEEndChannel&quot;: 16&#10;}"
+               parentComponent="pnlKeyboard"/>
+    <Component type="ScriptImage" id="Keyboard-shadow" x="-8.0" y="-6.0" width="795.0"
+               height="17.0" fileName="{PROJECT_FOLDER}synth_keyboard_line_shadow3.png"
+               parentComponent="pnlKeyboard" text=""/>
+  </Component>
+</ContentProperties>
